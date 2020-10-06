@@ -1,18 +1,24 @@
 grpc:
-  port: 8080
+  port: 8090
   enable-reflection: true
 spring:
   main:
     allow-bean-definition-overriding: true
   jmx:
     enabled: false
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: "https://mytenant.auth0.com/"
 logging :
   level:
-    root : debug
-
+    root : info
 security:
   basic:
-    enabled: false
+    enabled: true
 management:
   security:
-    enabled: false
+    enabled: true
+auth0:
+  audience: "https://api.dev.example.com"
