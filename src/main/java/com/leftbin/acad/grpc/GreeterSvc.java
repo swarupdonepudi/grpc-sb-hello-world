@@ -32,6 +32,7 @@ public class GreeterSvc extends GreeterGrpc.GreeterImplBase {
             Map<String, Object> tokenAttributes = JwtAuthenticationToken.class.cast(auth).getTokenAttributes();
             tokenAttributes.forEach((k,v)->l.info("key: {}, val: {}", k, v));
         }
+        l.info("swarup: auth object : {}", auth.toString());
         responseObserver.onNext(GreeterOuterClass.HelloReply.newBuilder().build());
         responseObserver.onCompleted();
     }

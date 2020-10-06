@@ -6,13 +6,19 @@ spring:
     allow-bean-definition-overriding: true
   jmx:
     enabled: false
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: "https://mytenant.auth0.com/"
 logging :
   level:
     root : debug
-
 security:
   basic:
-    enabled: false
+    enabled: true
 management:
   security:
-    enabled: false
+    enabled: true
+auth0:
+  audience: "https://apis.dev.example.com"
