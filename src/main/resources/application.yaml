@@ -10,7 +10,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: "https://cforcoins.auth0.com/"
+          issuer-uri: "https://mytenant.auth0.com/"
 logging :
   level:
     root : info
@@ -21,4 +21,4 @@ management:
   security:
     enabled: true
 auth0:
-  audience: "https://mobile-backend.dev.cforcoins.com"
+  audience: "https://api.dev.example.com"
