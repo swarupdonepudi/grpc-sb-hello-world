@@ -1,5 +1,5 @@
 grpc:
-  port: 8080
+  port: 8090
   enable-reflection: true
 spring:
   main:
@@ -10,10 +10,10 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: "https://mytenant.auth0.com/"
+          issuer-uri: "https://cforcoins.auth0.com/"
 logging :
   level:
-    root : debug
+    root : info
 security:
   basic:
     enabled: true
@@ -21,4 +21,4 @@ management:
   security:
     enabled: true
 auth0:
-  audience: "https://apis.dev.example.com"
+  audience: "https://mobile-backend.dev.cforcoins.com"
