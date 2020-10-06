@@ -1,0 +1,18 @@
+grpc:
+  port: 8080
+  enable-reflection: true
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  jmx:
+    enabled: false
+logging :
+  level:
+    root : debug
+
+security:
+  basic:
+    enabled: false
+management:
+  security:
+    enabled: false
