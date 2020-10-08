@@ -19,6 +19,7 @@ class AudienceValidator implements OAuth2TokenValidator<Jwt> {
 
     public OAuth2TokenValidatorResult validate(Jwt jwt) {
         l.info("swarup: validating the token {}", jwt.getSubject());
+        jwt.getClaims().forEach((k,v)->l.info("key: {}, val: {}", k, v));
         OAuth2Error error = new OAuth2Error("invalid_token", "The required audience is missing", null);
 
         if (jwt.getAudience().contains(audience)) {

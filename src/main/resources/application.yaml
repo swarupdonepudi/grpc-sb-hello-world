@@ -2,18 +2,16 @@ grpc:
   port: 8090
   enable-reflection: true
 spring:
-  main:
-    allow-bean-definition-overriding: true
   jmx:
     enabled: false
   security:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: "https://mytenant.auth0.com/"
+          issuer-uri: "https://mytenent.auth0.com/"
 logging :
   level:
-    root : info
+    root : debug
 security:
   basic:
     enabled: true
@@ -21,4 +19,6 @@ management:
   security:
     enabled: true
 auth0:
-  audience: "https://api.dev.example.com"
+  audience: "https://api.example.com"
+rbac:
+  scope: "profile:read"

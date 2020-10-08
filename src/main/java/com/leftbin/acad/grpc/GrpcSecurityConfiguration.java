@@ -40,9 +40,7 @@ public class GrpcSecurityConfiguration extends GrpcSecurityConfigurerAdapter {
 
     @Override
     public void configure(GrpcSecurity builder) throws Exception {
-        builder.authorizeRequests()
-                .methods(GreeterGrpc.getSayHelloMethod()).authenticated().withSecuredAnnotation()
+        builder.authorizeRequests().withSecuredAnnotation()
                 .authenticationProvider(JwtAuthProviderFactory.forAuthorities(jwtDecoder()));
     }
-
 }
